@@ -1,0 +1,11 @@
+﻿@model ProductListViewModel
+<p><h1>Результаты поиска по "@Model.searchResult"</h1></p>
+<div class="row mt-5 mb-4">
+
+    @{
+        foreach (Product prod in Model.getAllProducts)
+        {
+            @Html.Partial("Products", prod)
+        }
+    }
+</div>

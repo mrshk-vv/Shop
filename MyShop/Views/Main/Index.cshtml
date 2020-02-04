@@ -1,0 +1,13 @@
+﻿@model MainViewModel
+        <h1>Товары бестселлеры </h1>
+        <div class="row mt-5 mb-2">
+            @{
+                foreach (Product product in Model.favProducts)
+                {
+                    @Html.Partial("Products", product)
+                }
+            }
+
+        </div>
+
+
